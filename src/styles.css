@@ -54,3 +54,9 @@ ul {
   font-size: 16px;
   top: -16px;
 }
+
+.image {
+  width: 64px;
+  height: 64px;
+  margin-top: -15px;
+}
