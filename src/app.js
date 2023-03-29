@@ -1,5 +1,6 @@
 let apiKey = "49f7b3d442aeb8o7d9b6atfa6542c50f";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=london&key=${apiKey}&units=metric`;
+let city = "paris";
+let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}}&key=${apiKey}&units=metric`;
 
 function formatDate(timestamp) {
   let now = new Date();
