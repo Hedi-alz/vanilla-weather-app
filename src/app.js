@@ -11,22 +11,25 @@ function formatDate(timestamp) {
   ];
   let day = days[now.getDay()];
   let hour = now.getHours();
-  //if (hour < 10) {
-  // let hour = `0${hour}`;
-  //}
   let minute = now.getMinutes();
-  //if (minute < 10) {
-  //let minute = `0${minute}`;
+  //if (hour < 10) {
+  //let hour = `0${hour}`;
   //}
-  return ` ${day}, ${hour}:${minute} `;
-  //let date = new Date(timestamp);
-  //let hours = date.getHours();
-  //let minutes = date.getMinutes();
-  //let day = date.getDay();
-  //return `${day} ${hours} ${minutes}`;
+  //if (minute < 10) {
+  // let minute = `0${minute}`;
+  //}
+
+  return `${day}, ${hour}:${minute}`;
 }
+//another solution for date:
+//let date = new Date(timestamp);
+//let hours = date.getHours();
+//let minutes = date.getMinutes();
+//let day = date.getDay();
+//return `${day} ${hours} ${minutes}`;
 
 function showTemperature(response) {
+  console.log(response);
   let temperatureElement = document.querySelector("#temperature");
   celsiusTemperature = Math.round(response.data.temperature.current);
   temperatureElement.innerHTML = celsiusTemperature;

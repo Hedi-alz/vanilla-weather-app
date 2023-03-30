@@ -2,18 +2,21 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.weather-app {
+.weather-app-wrapper {
   max-width: 600px;
   margin: 30px auto;
+}
+
+.weather-app {
   padding: 20px;
-  border: 1px solid rgb(127, 245, 81);
+  border: 1px solid #342b5a;
   border-radius: 6px;
 }
 
 h1 {
-  color: rgb(0, 255, 128);
+  color: #895cf1;
   display: block;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 100;
 }
 
@@ -70,5 +73,8 @@ ul {
 }
 
 .active:hover {
+  text-decoration: none;
+}
+.git {
   text-decoration: none;
 }
