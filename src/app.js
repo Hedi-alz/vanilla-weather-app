@@ -1,7 +1,3 @@
-let apiKey = "49f7b3d442aeb8o7d9b6atfa6542c50f";
-let city = "oslo";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}}&key=${apiKey}&units=metric`;
-
 function formatDate(timestamp) {
   let now = new Date();
   let days = [
@@ -51,4 +47,19 @@ function showTemperature(response) {
   iconElement.setAttribute("alt", response.data.condition.icon);
 }
 
-axios.get(apiUrl).then(showTemperature);
+function search(city) {
+  let apiKey = "49f7b3d442aeb8o7d9b6atfa6542c50f";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showTemperature);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+search("london");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
