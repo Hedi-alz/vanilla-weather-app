@@ -60,3 +60,15 @@ ul {
   height: 64px;
   margin-top: -15px;
 }
+.active {
+  text-decoration: none;
+  color: black;
+  cursor: default;
+}
+.fahrenheit {
+  text-decoration: none;
+}
+
+.active:hover {
+  text-decoration: none;
+}
