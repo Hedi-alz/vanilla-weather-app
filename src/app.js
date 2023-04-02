@@ -21,6 +21,29 @@ function formatDate(timestamp) {
 
   return `${day}, ${hour}:${minute}`;
 }
+
+function showForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let forecastDay = ["Thue", "Fri", "Sat", "Sun", "Mon"];
+  forecastDay.forEach(function (days) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+              <div class="weather-forecast-date">${days}</div>
+             <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-night.png" width="36"/>
+             <div class="weather-forecast-temperature">
+              <span class="weather-max">18°</span>
+              <span class="weather-min">12°</span> 
+             </div> 
+            </div>
+          `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 //another solution for date:
 //let date = new Date(timestamp);
 //let hours = date.getHours();
@@ -92,3 +115,5 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsius);
 
 search("london");
+
+showForecast();
