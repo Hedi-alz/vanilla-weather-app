@@ -33,10 +33,10 @@ ul {
 
 .weather-app {
   padding: 20px;
-  border: 1px solid #dbd8e3;
+  border: 1px solid #838286;
   border-radius: 6px;
   background-color: #393e46;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 li:first-letter {
@@ -94,7 +94,7 @@ li:first-letter {
 }
 
 .horizontal {
-  color: #4ef037;
+  color: #69ff55;
 }
 
 .weather-forecast {
